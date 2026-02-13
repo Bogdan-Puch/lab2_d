@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page_title }}</title>
+</head>
+<body>
+    <h1>{{ page_title }}</h1>
+    <p>{{ main_text }}</p>
+
+    <hr>
+
+    <nav>
+        {% if is_home %}
+            <h3>Оберіть суперзірку:</h3>
+            <ul>
+                <li><a href="{% url 'star1' %}">Перша зірка</a></li>
+                <li><a href="{% url 'star2' %}">Друга зірка</a></li>
+            </ul>
+        {% else %}
+            <a href="{% url 'home' %}">← Повернутися на головну</a>
+        {% endif %}
+    </nav>
+</body>
+</html>
